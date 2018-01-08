@@ -1,0 +1,4 @@
+# For ubuntu 16.04 usb installation media
+# Others see directory /dist/DISTRO in usb
+
+deb [trusted=yes] file:/mnt xenial main restricted

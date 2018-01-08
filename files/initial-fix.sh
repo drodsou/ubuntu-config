@@ -1,0 +1,58 @@
+#!/bin/bash
+
+
+# check sudo
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
+# grub and default network names
+cp ./etc-default-grub /etc/default/grub
+update-grub
+
+# pre-install
+cp ./etc-apt-sources.list* /etc/apt/
+apt update
+
+# fix kvm net and set bonded/bridged
+virsh net-list
+virsh net-destroy default
+virsh net-undefine default
+
+# # bonding
+# apt -y install ifenslave 
+# echo "bonding" >> /etc/modules
+# 
+# # bridge
+# apt -y install bridge-utils
+
+#network config
+apt purge network-manager
+cp ./etc-network-interfaces* /etc/network/
+cp ./etc-network-interfaces.basic etc/network/interfaces
+
+
+# common config
+mkdir /usr/share/config-common
+cp ./bashrc-common.sh /usr/share/config-common/
+cp ./vimrc-common.vim /usr/share/config-common/
+cp /usr/share/X11/xkb/symbols/es /usr/share/X11/xkb/symbols/es.ori
+cp ./usr-share-X11-xkb-symbols-es /usr/share/X11/xkb/symbols/es
+
+echo "source /usr/share/config-common/vimrc-common.vim" >> ~/.vimrc
+echo "source /usr/share/config-common/bashrc-common.sh" >> ~/.bashrc
+
+cat <<EOF
+Other sugestions:
+- no btrfs: apt purge btrfs-tools
+- wifi: apt install wpasupplicant wireless-tools
+- if you need to apt install without LAN : see alternative sources.list.usb in /etc/apt
+- NICs bonding:
+    apt -y install ifenslave 
+    echo "bonding" >> /etc/modules
+    see in /etc/network/ alternate interfaces file
+ - Network bridge
+    apt -y install bridge-utils
+    see in /etc/network/ alternate interfaces file
+EOF

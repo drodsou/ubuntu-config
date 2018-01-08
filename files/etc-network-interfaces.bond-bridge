@@ -1,0 +1,35 @@
+# -- loopback
+auto lo
+  iface lo inet loopback
+
+# -- first slave
+auto eth0
+  iface eth0 inet manual
+  bond-master bond0
+
+# -- second slave (uncomment if eth1 exist)
+#auto eth1
+#  iface eth1 inet manual
+#  bond-master bond0
+
+# -- bond of the two nics
+auto bond0
+  iface bond0 inet manual
+  bond_mode balance-rr
+  bond_miimon 100
+  bond-slaves none
+
+
+# -- bridge para kvm, final link
+auto br0
+  iface br0 inet static
+  bridge_ports bond0
+  bridge_stp off
+  bridge_fd 0
+   
+  # set address here
+  netmask 255.255.255.0
+  address 10.61.154.81
+  gateway 10.61.154.1
+  dns-nameserver 10.180.188.75
+  

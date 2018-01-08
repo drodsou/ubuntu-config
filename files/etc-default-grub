@@ -1,0 +1,10 @@
+# change this in /boot/grub/grubenv
+GRUB_DEFAULT=saved
+
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_TIMEOUT=1
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT=""
+
+# force names eth0, wlan0
+GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"

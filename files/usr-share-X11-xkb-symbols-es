@@ -1,0 +1,57 @@
+
+// Modified for a real Spanish keyboard by Jon Tombs... and David Rodriguez Souto :-)
+
+default  partial alphanumeric_keys
+xkb_symbols "basic" {
+
+    include "latin(type4)"
+
+    name[Group1]="Spanish";
+
+    key <AE01>  { [         1,     exclam,          bar,   exclamdown ] };
+    key <AE03>  { [         3, apostrophe,   numbersign,   sterling ]   };
+    key <AE04>  { [         4,     dollar,   asciitilde,       dollar ] };
+    key <AE06>  { [         6,  ampersand,      notsign,  fiveeighths ] };
+    key <AE11>  { [apostrophe,   question,    backslash, questiondown ] };
+    key <AE12>  { [exclamdown, questiondown, dead_tilde,   asciitilde ] };
+
+    key <AD11>  { [ grave, circumflex, bracketleft, dead_abovering ] };
+    key <AD12>  { [      plus,   asterisk, bracketright,  dead_macron ] };
+
+    key <AC10>  { [    ntilde, Ntilde,   asciitilde, dead_doubleacute ] };
+    key <AC11>  { [dead_acute, dead_diaeresis, braceleft,   braceleft ] };
+    key <TLDE>  { [ masculine, ordfeminine,    backslash,   backslash ] };
+
+    // añadido slash en vez de cedilla
+    key <BKSL>  { [  slash,   Ccedilla,   braceright,   dead_breve ]    };
+
+    include "level3(ralt_switch)"
+
+    // extra
+    // altgr-shift s,d,f,e : « » µ ¶
+
+    key <AE08>  { [ 8, parenleft, parenleft ]   };
+    key <AE09>  { [ 9, parenright, parenright ] };
+
+    key <AD01>  { [ q, Q, BackSpace ] };
+    key <AD02>  { [ w, W, Home ] };
+    key <AD03>  { [ e, E, Up, mu ] };
+    key <AD04>  { [ r, R, End ] };
+    key <AD05>  { [ t, T, Prior ] };
+    key <AD08>  { [ i, I, bracketleft ] };
+    key <AD09>  { [ o, O, bracketright ] };
+
+    key <AC01>  { [ a, A, Return ] };
+    key <AC02>  { [ s, S, Left, guillemotleft ] };
+    key <AC03>  { [ d, D, Down , paragraph] };
+    key <AC04>  { [ f, F, Right, guillemotright ] };
+    key <AC05>  { [ g, G, Next ] };
+    key <AC08>  { [ k, K, braceleft ] };
+    key <AC09>  { [ l, L, braceright ] };
+
+
+    key <AB07>  { [ m, M, equal ] };
+    key <AB08>  { [ comma, semicolon, less ] };
+    key <AB09>  { [ period, colon, greater ] };
+    key <AB10>  { [ minus, underscore, slash ] };
+};
