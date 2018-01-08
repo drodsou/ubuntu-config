@@ -30,7 +30,7 @@ virsh net-undefine default
 #network config
 apt purge network-manager
 cp ./etc-network-interfaces* /etc/network/
-cp ./etc-network-interfaces.basic etc/network/interfaces
+cp ./etc-network-interfaces.basic /etc/network/interfaces
 
 
 # common config
