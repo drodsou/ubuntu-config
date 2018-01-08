@@ -39,6 +39,7 @@ cp ./bashrc-common.sh /usr/share/config-common/
 cp ./vimrc-common.vim /usr/share/config-common/
 cp /usr/share/X11/xkb/symbols/es /usr/share/X11/xkb/symbols/es.ori
 cp ./usr-share-X11-xkb-symbols-es /usr/share/X11/xkb/symbols/es
+dpkg-reconfigure keyboard-configuration
 
 echo "source /usr/share/config-common/vimrc-common.vim" >> ~/.vimrc
 echo "source /usr/share/config-common/bashrc-common.sh" >> ~/.bashrc
