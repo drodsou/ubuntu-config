@@ -1,0 +1,11 @@
+auto wlan0
+iface wlan0 inet dhcp
+
+wpa-ap-scan 1
+wpa-proto RSN WPA
+# wpa-pairwise CCMP TKIP
+# wpa-group CCMP TKIP
+wpa-key-mgmt WPA-PSK
+
+wpa-ssid MOVISTAR_44E5
+wpa-psk Arremecajenak0nichiua

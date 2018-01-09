@@ -1,0 +1,13 @@
+# NOTE: Basic config file. See /etc/network/ for bonding/bridge configuration file
+
+# -- The loopback network interface
+auto lo
+iface lo inet loopback
+
+
+# -- Uncomment ONLY ONE
+source /etc/network/interfaces.d/wired-dhcp
+#source /etc/network/interfaces.d/wired-static
+#source /etc/network/interfaces.d/wired-static-bond-bridge
+#source /etc/network/interfaces.d/wifi-home
+#source /etc/network/interfaces.d/wifi-enterprise

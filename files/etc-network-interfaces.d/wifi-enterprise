@@ -1,0 +1,17 @@
+auto wlan0
+iface wlan0 inet dhcp
+
+wireless-mode Managed
+wpa-ap-scan 1
+wpa-proto RSN WPA
+wpa-pairwise CCMP TKIP
+wpa-group CCMP TKIP
+wpa-key-mgmt WPA-EAP
+wpa-eap PEAP
+# wpa-phase1 fast_provisioning=1
+# wpa-phase2 mschapv2
+
+wpa-ssid RCXG-Externos
+wpa-identity **censored**
+wpa-password **censored**
+# wpa-pac-file xxx.cer

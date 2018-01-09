@@ -29,8 +29,8 @@ virsh net-undefine default
 
 #network config
 apt purge network-manager
-cp ./etc-network-interfaces* /etc/network/
-cp ./etc-network-interfaces.basic /etc/network/interfaces
+cp ./etc-network-interfaces.d/* /etc/network/interfaces.d/
+cp ./etc-network-interfaces /etc/network/interfaces
 
 
 # common config
@@ -52,8 +52,6 @@ Other sugestions:
 - NICs bonding:
     apt -y install ifenslave 
     echo "bonding" >> /etc/modules
-    see in /etc/network/ alternate interfaces file
  - Network bridge
     apt -y install bridge-utils
-    see in /etc/network/ alternate interfaces file
 EOF

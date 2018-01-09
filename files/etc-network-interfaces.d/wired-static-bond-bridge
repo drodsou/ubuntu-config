@@ -1,16 +1,12 @@
-# -- loopback
-auto lo
-  iface lo inet loopback
-
 # -- first slave
 auto eth0
   iface eth0 inet manual
   bond-master bond0
 
 # -- second slave (uncomment if eth1 exist)
-#auto eth1
-#  iface eth1 inet manual
-#  bond-master bond0
+auto eth1
+  iface eth1 inet manual
+  bond-master bond0
 
 # -- bond of the two nics
 auto bond0
@@ -18,7 +14,6 @@ auto bond0
   bond_mode balance-rr
   bond_miimon 100
   bond-slaves none
-
 
 # -- bridge para kvm, final link
 auto br0
