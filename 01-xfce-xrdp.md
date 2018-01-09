@@ -15,6 +15,12 @@ in "keyboard" assign Win or win-space to action: **xfce4-popup-whiskermenu**
 change icon by icons/action/format-center
 change background
 
+- copy profile (done in initial-fix.sh)
+cd ~/.config/xfce4
+zip -r dotconfig-xfce4.zip panel xfconf xfwm4
+see file **files/dotconfig-xfce4.zip**
+
+
 # xrdp
 Works ok with XFCE, not with Unity
 

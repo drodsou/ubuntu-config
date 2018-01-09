@@ -14,6 +14,7 @@ update-grub
 # pre-install
 cp ./etc-apt-sources.list* /etc/apt/
 apt update
+apt -y install zip unzip
 
 # fix kvm net and set bonded/bridged
 virsh net-list
@@ -48,7 +49,10 @@ echo "source /usr/share/config-common/bashrc-common.sh" > ~/.bashrc
 # install conqueterm for vim, use vith `vimbash file`
 vim /usr/share/config-common/conqueterm.vmb -c ':so % | q'
 
+# pre xfce config
 cp ./ubuntu-dark-wallpaper.jpg /usr/share/backgrounds/
+mkdir -p ~/.config/xfce4
+unzip ./dotconfig-xfce4.zip -d ~/.config/xfce4/
 
 cat <<EOF
 Other sugestions:
