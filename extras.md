@@ -23,3 +23,13 @@ control-w w   // when NOT in insert mode
 
 - alias
 vimbash  // defined in files/bashrc-common.sh
+
+
+# pendrives grandes
+apt install exfat-fuse exfat-tools
+
+#speedtest-cli
+apt install python-pip
+pip install --upgrade pip
+pip install speedtest-cli
+speedtest

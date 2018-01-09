@@ -14,7 +14,7 @@ update-grub
 # pre-install
 cp ./etc-apt-sources.list* /etc/apt/
 apt update
-apt -y install zip unzip
+apt -y install zip unzip exfat-fuse exfat-tools
 
 # fix kvm net and set bonded/bridged
 virsh net-list
