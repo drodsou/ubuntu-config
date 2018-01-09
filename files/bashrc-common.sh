@@ -14,6 +14,11 @@ export LS_COLORS
 function cd () {
     builtin cd "$@" && ls -a
 }
+
+function vimbash () {
+    vim "$1" -c ':ConqueTermSplit bash'
+}
+
 alias duh='du -hsc *'
 alias ls='ls -a --color'
 alias ll='ls -halF'
