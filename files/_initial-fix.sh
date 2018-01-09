@@ -53,8 +53,9 @@ vim /usr/share/config-common/conqueterm.vmb -c ':so % | q'
 # pre xfce config
 sudo mkdir -p /usr/share/backgrounds
 sudo cp ./ubuntu-dark-wallpaper.jpg /usr/share/backgrounds/
-mkdir -p ~/.config/xfce4
-unzip ./dotconfig-xfce4.zip -d ~/.config/xfce4/
+sudo mkdir -p ~/.config/xfce4
+sudo unzip ./dotconfig-xfce4.zip -d ~/.config/xfce4/
+sudo chown -R $SUDO_USER:$SUDO_USER /home/$SUDO_USER
 
 cat <<EOF
 Other sugestions:
