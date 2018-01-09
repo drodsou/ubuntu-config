@@ -7,5 +7,5 @@ wpa-proto RSN WPA
 # wpa-group CCMP TKIP
 wpa-key-mgmt WPA-PSK
 
-wpa-ssid MOVISTAR_44E5
-wpa-psk Arremecajenak0nichiua
+wpa-ssid WIFISSID
+wpa-psk WIFIPASS

@@ -54,4 +54,7 @@ Other sugestions:
     echo "bonding" >> /etc/modules
  - Network bridge
     apt -y install bridge-utils
+
+Now: Select network in /etc/network/interfaces and configures in /etc/network/interfaces.d
+...and reboot
 EOF

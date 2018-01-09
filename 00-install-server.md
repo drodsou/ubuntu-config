@@ -18,7 +18,7 @@ Ademas sin comprobar si clonezilla clona bien lvm
 
 - desconectar red para que vaya mas rapido
 - openssh, mail (post fix : satelite, smtp2...)
-- virtualizacion : no, crea bridges que no se necesitan
+- virtualizacion : si quieres kvm
 
 
 ## get network
