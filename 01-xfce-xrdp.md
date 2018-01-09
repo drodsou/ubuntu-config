@@ -1,11 +1,13 @@
 # xfce
 
 - install
-apt install xfce4 xfce4-whisker-plugin xfce4-terminal gedit firefox
+apt install xfce4 xfce4-whiskermenu-plugin xfce4-terminal gedit firefox xbacklight
 
 - start with non-root user
 In case *startx* or *startxfce4* gives error, do:
-`chmod -R youruser:youruser /home/yourusers`
+```
+chown -R youruser:youruser /home/youruser/
+```
 
 - stetics
 add whisker-menu to panel, remove menu
