@@ -14,7 +14,7 @@ sudo update-grub
 # pre-install
 sudo cp ./etc-apt-sources.list* /etc/apt/
 sudo apt update
-sudo apt -y install zip unzip exfat-fuse exfat-tools
+sudo apt -y install zip unzip exfat-fuse exfat-utils
 
 # fix kvm net and set bonded/bridged
 sudo virsh net-list
@@ -51,6 +51,7 @@ echo "source /usr/share/config-common/bashrc-common.sh" > ~/.bashrc
 vim /usr/share/config-common/conqueterm.vmb -c ':so % | q'
 
 # pre xfce config
+sudo mkdir -p /usr/share/backgrounds
 sudo cp ./ubuntu-dark-wallpaper.jpg /usr/share/backgrounds/
 mkdir -p ~/.config/xfce4
 unzip ./dotconfig-xfce4.zip -d ~/.config/xfce4/
