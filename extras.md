@@ -33,3 +33,17 @@ apt install python-pip
 pip install --upgrade pip
 pip install speedtest-cli
 speedtest
+
+
+# format ntfs partition
+- easy way with gparted
+sudo apt-get install ntfsprogs gparted
+use gparted in X
+
+- with fdisk + mkfs.ntfs
+sudo fdisk /dev/sdX
+n ... // new partition
+t 7   // change partition type 7 = hpfs/ntfs/exfat
+w
+
+sudo mkfs.ntfs -f /dev/sdXy  // quick NTFS format

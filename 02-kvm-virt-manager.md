@@ -24,3 +24,16 @@ virsh list --autostart
 - network
 If two nics bonding you need to create a classic bridge, see
 If only one nic, you dont need bridge just use mavtap option
+
+
+# extra:mount virtual disk w/o virtual machine
+```
+modprobe nbd
+qemu-nbd -c /dev/nbd0 ./somedisk.vmdk
+mount -t ext4 /dev/nbd0p1 /mnt/disk1p1
+
+# do things
+
+umount /mnt/disk1p1
+qemu-nbd -d /dev/nbd0
+```
