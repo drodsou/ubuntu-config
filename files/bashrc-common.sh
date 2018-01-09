@@ -30,6 +30,8 @@ alias coderoot='sudo code --user-data-dir="~/.vscode-root"'
 # disable ctrl-s (blocks input, need ctrl-q afterwards)
 stty -ixon
 
+# numlock on (numbers)
+setleds -D +num
 
 # Additional key mapping
 #  - see map table: xmodmap -pke

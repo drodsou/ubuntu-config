@@ -20,7 +20,7 @@ xkb_symbols "basic" {
 
     key <AC10>  { [    ntilde, Ntilde,   asciitilde, dead_doubleacute ] };
     key <AC11>  { [dead_acute, dead_diaeresis, braceleft,   braceleft ] };
-    key <TLDE>  { [ masculine, ordfeminine,    backslash,   backslash ] };
+    key <TLDE>  { [ slash, ordfeminine,    backslash,   backslash ] };
 
     // añadido slash en vez de cedilla
     key <BKSL>  { [  slash,   Ccedilla,   braceright,   dead_breve ]    };
