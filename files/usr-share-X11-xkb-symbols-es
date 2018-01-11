@@ -56,4 +56,5 @@ xkb_symbols "basic" {
     key <AB10>  { [ minus, underscore, slash ] };
 
     key <CAPS>  { [ Control_L ] };
+    # setxkbmap -option ctrl:nocaps
 };
