@@ -37,14 +37,17 @@ sudo sed -i 's/timeout 300/timeout 10/' /etc/dhcp/dhclient.conf
 
 # common config
 sudo mkdir /usr/share/config-common
+sudo cp ./dotnanorc /usr/share/config-common/
+sudo cp ./usr-share-nano-markdown.nanorc /usr/share/nano/markdown.nanorc
 sudo cp ./bashrc-common.sh /usr/share/config-common/
-sudo cp ./vimrc-common.vim /usr/share/config-common/
-sudo cp ./conqueterm.vmb /usr/share/config-common/
+#sudo cp ./vimrc-common.vim /usr/share/config-common/
+#sudo cp ./conqueterm.vmb /usr/share/config-common/
 sudo cp /usr/share/X11/xkb/symbols/es /usr/share/X11/xkb/symbols/es.ori
 sudo cp ./usr-share-X11-xkb-symbols-es /usr/share/X11/xkb/symbols/es
 sudo dpkg-reconfigure keyboard-configuration
 
-echo "source /usr/share/config-common/vimrc-common.vim" > ~/.vimrc
+#echo "source /usr/share/config-common/vimrc-common.vim" > ~/.vimrc
+echo 'include "/usr/share/config-common/dotnanorc"' > ~/.nanorc
 echo "source /usr/share/config-common/bashrc-common.sh" > ~/.bashrc
 
 # install conqueterm for vim, use vith `vimbash file`

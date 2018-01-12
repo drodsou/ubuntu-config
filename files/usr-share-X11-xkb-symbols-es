@@ -34,7 +34,7 @@ xkb_symbols "basic" {
     key <AD07>  { [ u, U, minus ] };    
     key <AD08>  { [ i, I, bracketleft ] };
     key <AD09>  { [ o, O, bracketright ] };
-    key <AD11>  { [ grave, circumflex, bracketleft, dead_abovering ] };
+    key <AD11>  { [ grave, asciicircum, bracketleft, dead_abovering ] };
     key <AD12>  { [  plus,   asterisk, bracketright,  dead_macron ] };
 
 
