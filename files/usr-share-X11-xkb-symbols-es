@@ -5,37 +5,25 @@ default  partial alphanumeric_keys
 xkb_symbols "basic" {
 
     include "latin(type4)"
+    include "level3(ralt_switch)"
 
     name[Group1]="Spanish";
 
+    key <TLDE>  { [ slash, colon,    backslash,   backslash ] };
     key <AE01>  { [         1,     exclam,          bar,   exclamdown ] };
     key <AE03>  { [         3,      grave,   numbersign,   sterling,  exclamdown]   };
     key <AE04>  { [         4,     dollar,   asciitilde,       dollar ] };
-    key <AE05>  { [         5,    percent,      asterisk,  ] };
-    key <AE06>  { [         6,  ampersand,      notsign,  ] };
-    key <AE07>  { [         7,      slash,        slash,  ] };
-    key <AE10>  { [         0,      equal,        equal,  ] };
+    key <AE05>  { [         5,    percent,      asterisk  ] };
+    key <AE06>  { [         6,  ampersand,      notsign  ] };
+    key <AE07>  { [         7,      slash,        slash  ] };
+    key <AE08>  { [         8, parenleft, parenleft ]   };
+    key <AE09>  { [         9, parenright, parenright ] };    
+    key <AE10>  { [         0,      equal,        equal  ] };
     key <AE11>  { [apostrophe,   question,    backslash,        equal ] };
     key <AE12>  { [exclamdown, questiondown, dead_tilde,   asciitilde ] };
 
-    key <AD11>  { [ grave, circumflex, bracketleft, dead_abovering ] };
-    key <AD12>  { [      plus,   asterisk, bracketright,  dead_macron ] };
 
-    key <AC10>  { [    ntilde, Ntilde,   asciitilde, dead_doubleacute ] };
-    key <AC11>  { [dead_acute, dead_diaeresis, braceleft,   braceleft ] };
-    key <TLDE>  { [ slash, colon,    backslash,   backslash ] };
-
-    // añadido slash en vez de cedilla
-    key <BKSL>  { [  asterisk,   Ccedilla,   braceright,   dead_breve ]    };
-
-    include "level3(ralt_switch)"
-
-    // extra
     // altgr-shift s,d,f,e : « » µ ¶
-
-    key <AE08>  { [ 8, parenleft, parenleft ]   };
-    key <AE09>  { [ 9, parenright, parenright ] };
-
     key <AD01>  { [ q, Q, BackSpace ] };
     key <AD02>  { [ w, W, Home ] };
     key <AD03>  { [ e, E, Up, mu ] };
@@ -45,6 +33,10 @@ xkb_symbols "basic" {
     key <AD07>  { [ u, U, minus ] };    
     key <AD08>  { [ i, I, bracketleft ] };
     key <AD09>  { [ o, O, bracketright ] };
+    key <AD11>  { [ grave, circumflex, bracketleft, dead_abovering ] };
+    key <AD12>  { [      plus,   asterisk, bracketright,  dead_macron ] };
+
+
 
     key <AC01>  { [ a, A, Return ] };
     key <AC02>  { [ s, S, Left, guillemotleft ] };
@@ -53,17 +45,20 @@ xkb_symbols "basic" {
     key <AC05>  { [ g, G, Next ] };
     key <AC08>  { [ k, K, braceleft ] };
     key <AC09>  { [ l, L, braceright ] };
+    key <AC10>  { [    ntilde, Ntilde,   asciitilde, dead_doubleacute ] };
+    key <AC11>  { [dead_acute, dead_diaeresis, braceleft,   braceleft ] };
+    key <BKSL>  { [  asterisk,   Ccedilla,   braceright,   dead_breve ]    };
 
 
     key <AB02>  { [ x, X, asterisk ] };
     key <AB03>  { [ c, C, plus ] };
     key <AB04>  { [ v, V, ampersand ] };
     key <AB05>  { [ b, B, bar ] };
-
     key <AB07>  { [ m, M, equal ] };
     key <AB08>  { [ comma, semicolon, less ] };
     key <AB09>  { [ period, colon, greater ] };
     key <AB10>  { [ minus, underscore, slash ] };
+
 
     key <CAPS>  { [ Control_L ] };    # works in console but not in unity desktop/terminal
     # setxkbmap -option ctrl:nocaps   # works in desktop, put it in .profile
