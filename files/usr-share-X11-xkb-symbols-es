@@ -10,8 +10,9 @@ xkb_symbols "basic" {
     name[Group1]="Spanish";
 
     key <TLDE>  { [ slash, colon,    backslash,   backslash ] };
-    key <AE01>  { [         1,     exclam,          bar,   exclamdown ] };
-    key <AE03>  { [         3,      grave,   numbersign,   sterling,  exclamdown]   };
+    key <AE01>  { [         1,     exclam,          bar,   ampersand ] };
+    key <AE02>  { [         2,     quotedbl,        at ] };
+    key <AE03>  { [         3,      grave,   numbersign ] };
     key <AE04>  { [         4,     dollar,   asciitilde,       dollar ] };
     key <AE05>  { [         5,    percent,      asterisk  ] };
     key <AE06>  { [         6,  ampersand,      notsign  ] };
@@ -19,8 +20,8 @@ xkb_symbols "basic" {
     key <AE08>  { [         8, parenleft, parenleft ]   };
     key <AE09>  { [         9, parenright, parenright ] };    
     key <AE10>  { [         0,      equal,        equal  ] };
-    key <AE11>  { [apostrophe,   question,    backslash,        equal ] };
-    key <AE12>  { [exclamdown, questiondown, dead_tilde,   asciitilde ] };
+    key <AE11>  { [apostrophe,   question,    quotedbl ] };
+    key <AE12>  { [exclamdown, questiondown, colon ] };
 
 
     // altgr-shift s,d,f,e : « » µ ¶
@@ -34,7 +35,7 @@ xkb_symbols "basic" {
     key <AD08>  { [ i, I, bracketleft ] };
     key <AD09>  { [ o, O, bracketright ] };
     key <AD11>  { [ grave, circumflex, bracketleft, dead_abovering ] };
-    key <AD12>  { [      plus,   asterisk, bracketright,  dead_macron ] };
+    key <AD12>  { [  plus,   asterisk, bracketright,  dead_macron ] };
 
 
 
@@ -47,13 +48,14 @@ xkb_symbols "basic" {
     key <AC09>  { [ l, L, braceright ] };
     key <AC10>  { [    ntilde, Ntilde,   asciitilde, dead_doubleacute ] };
     key <AC11>  { [dead_acute, dead_diaeresis, braceleft,   braceleft ] };
-    key <BKSL>  { [  asterisk,   Ccedilla,   braceright,   dead_breve ]    };
+    key <BKSL>  { [  colon,   Ccedilla,   braceright,   dead_breve ]    };
 
 
     key <AB02>  { [ x, X, asterisk ] };
-    key <AB03>  { [ c, C, plus ] };
-    key <AB04>  { [ v, V, ampersand ] };
+    key <AB03>  { [ c, C, colon ] };
+    key <AB04>  { [ v, V, semicolon ] };
     key <AB05>  { [ b, B, bar ] };
+    key <AB06>  { [ n, N, minus ] };
     key <AB07>  { [ m, M, equal ] };
     key <AB08>  { [ comma, semicolon, less ] };
     key <AB09>  { [ period, colon, greater ] };
@@ -63,7 +65,6 @@ xkb_symbols "basic" {
     key <CAPS>  { [ Control_L ] };    # works in console but not in unity desktop/terminal
     # setxkbmap -option ctrl:nocaps   # works in desktop, put it in .profile
 };
-
 
 
 
