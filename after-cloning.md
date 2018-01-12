@@ -1,4 +1,4 @@
-# -- DESPUES DE CLONAR
+# -- DESPUES DE CLONAR / AFTER CLONE
 
 1) Cambiar hostname en varios sitios
 sudo sed -i "s/OLD-HOSTNAME/NEW-HOSTNAME/g" /etc/hosts /etc/hostname /etc/postfix/main.cf

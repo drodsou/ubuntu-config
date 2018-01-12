@@ -20,7 +20,7 @@ xkb_symbols "basic" {
 
     key <AC10>  { [    ntilde, Ntilde,   asciitilde, dead_doubleacute ] };
     key <AC11>  { [dead_acute, dead_diaeresis, braceleft,   braceleft ] };
-    key <TLDE>  { [ slash, ordfeminine,    backslash,   backslash ] };
+    key <TLDE>  { [ slash, colon,    backslash,   backslash ] };
 
     // añadido slash en vez de cedilla
     key <BKSL>  { [  slash,   Ccedilla,   braceright,   dead_breve ]    };
@@ -38,7 +38,9 @@ xkb_symbols "basic" {
     key <AD03>  { [ e, E, Up, mu ] };
     key <AD04>  { [ r, R, End ] };
     key <AD05>  { [ t, T, Prior ] };
-    key <AD08>  { [ i, I, bracketleft ] };
+    key <AD06>  { [ t, T, Prior ] };
+    key <AD07>  { [ y, Y, ampersand ] };
+    key <AD08>  { [ u, U, bar ] };
     key <AD09>  { [ o, O, bracketright ] };
 
     key <AC01>  { [ a, A, Return ] };
@@ -50,11 +52,18 @@ xkb_symbols "basic" {
     key <AC09>  { [ l, L, braceright ] };
 
 
+    key <AB02>  { [ x, X, asterisk ] };
+    key <AB03>  { [ c, C, plus ] };
+
     key <AB07>  { [ m, M, equal ] };
     key <AB08>  { [ comma, semicolon, less ] };
     key <AB09>  { [ period, colon, greater ] };
     key <AB10>  { [ minus, underscore, slash ] };
 
-    key <CAPS>  { [ Control_L ] };
-    # setxkbmap -option ctrl:nocaps
+    key <CAPS>  { [ Control_L ] };    # works in console but not in unity desktop/terminal
+    # setxkbmap -option ctrl:nocaps   # works in desktop, put it in .profile
 };
+
+
+
+
