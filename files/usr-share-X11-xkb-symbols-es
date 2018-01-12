@@ -20,7 +20,7 @@ xkb_symbols "basic" {
     key <AE08>  { [         8, parenleft, parenleft ]   };
     key <AE09>  { [         9, parenright, parenright ] };    
     key <AE10>  { [         0,      equal,        equal  ] };
-    key <AE11>  { [apostrophe,   question,    quotedbl ] };
+    key <AE11>  { [apostrophe,   question,    apostrophe ] };
     key <AE12>  { [exclamdown, questiondown, comma ] };
 
 
@@ -56,7 +56,7 @@ xkb_symbols "basic" {
     key <AB04>  { [ v, V, semicolon ] };
     key <AB05>  { [ b, B, bar ] };
     key <AB06>  { [ n, N, minus ] };
-    key <AB07>  { [ m, M, equal ] };
+    key <AB07>  { [ m, M, exclam ] };
     key <AB08>  { [ comma, semicolon, less ] };
     key <AB09>  { [ period, colon, greater ] };
     key <AB10>  { [ minus, underscore, slash ] };
