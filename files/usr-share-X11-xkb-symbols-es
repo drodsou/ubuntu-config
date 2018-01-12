@@ -9,10 +9,13 @@ xkb_symbols "basic" {
     name[Group1]="Spanish";
 
     key <AE01>  { [         1,     exclam,          bar,   exclamdown ] };
-    key <AE03>  { [         3, apostrophe,   numbersign,   sterling ]   };
+    key <AE03>  { [         3,      grave,   numbersign,   sterling,  exclamdown]   };
     key <AE04>  { [         4,     dollar,   asciitilde,       dollar ] };
-    key <AE06>  { [         6,  ampersand,      notsign,  fiveeighths ] };
-    key <AE11>  { [apostrophe,   question,    backslash, questiondown ] };
+    key <AE05>  { [         5,    percent,      asterisk,  ] };
+    key <AE06>  { [         6,  ampersand,      notsign,  ] };
+    key <AE07>  { [         7,      slash,        slash,  ] };
+    key <AE10>  { [         0,      equal,        equal,  ] };
+    key <AE11>  { [apostrophe,   question,    backslash,        equal ] };
     key <AE12>  { [exclamdown, questiondown, dead_tilde,   asciitilde ] };
 
     key <AD11>  { [ grave, circumflex, bracketleft, dead_abovering ] };
@@ -23,7 +26,7 @@ xkb_symbols "basic" {
     key <TLDE>  { [ slash, colon,    backslash,   backslash ] };
 
     // añadido slash en vez de cedilla
-    key <BKSL>  { [  slash,   Ccedilla,   braceright,   dead_breve ]    };
+    key <BKSL>  { [  asterisk,   Ccedilla,   braceright,   dead_breve ]    };
 
     include "level3(ralt_switch)"
 
@@ -38,9 +41,9 @@ xkb_symbols "basic" {
     key <AD03>  { [ e, E, Up, mu ] };
     key <AD04>  { [ r, R, End ] };
     key <AD05>  { [ t, T, Prior ] };
-    key <AD06>  { [ t, T, Prior ] };
-    key <AD07>  { [ y, Y, ampersand ] };
-    key <AD08>  { [ u, U, bar ] };
+    key <AD06>  { [ y, Y, plus ] };
+    key <AD07>  { [ u, U, minus ] };    
+    key <AD08>  { [ i, I, bracketleft ] };
     key <AD09>  { [ o, O, bracketright ] };
 
     key <AC01>  { [ a, A, Return ] };
@@ -54,6 +57,8 @@ xkb_symbols "basic" {
 
     key <AB02>  { [ x, X, asterisk ] };
     key <AB03>  { [ c, C, plus ] };
+    key <AB04>  { [ v, V, ampersand ] };
+    key <AB05>  { [ b, B, bar };
 
     key <AB07>  { [ m, M, equal ] };
     key <AB08>  { [ comma, semicolon, less ] };
