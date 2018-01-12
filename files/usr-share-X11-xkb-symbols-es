@@ -58,7 +58,7 @@ xkb_symbols "basic" {
     key <AB02>  { [ x, X, asterisk ] };
     key <AB03>  { [ c, C, plus ] };
     key <AB04>  { [ v, V, ampersand ] };
-    key <AB05>  { [ b, B, bar };
+    key <AB05>  { [ b, B, bar ] };
 
     key <AB07>  { [ m, M, equal ] };
     key <AB08>  { [ comma, semicolon, less ] };
