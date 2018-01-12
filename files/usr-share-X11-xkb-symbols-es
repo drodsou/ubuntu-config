@@ -12,7 +12,7 @@ xkb_symbols "basic" {
     key <TLDE>  { [ slash, colon,    backslash,   backslash ] };
     key <AE01>  { [         1,     exclam,          bar,   ampersand ] };
     key <AE02>  { [         2,     quotedbl,        at ] };
-    key <AE03>  { [         3,      grave,   numbersign ] };
+    key <AE03>  { [         3,      comma,   numbersign ] };
     key <AE04>  { [         4,     dollar,   asciitilde,       dollar ] };
     key <AE05>  { [         5,    percent,      asterisk  ] };
     key <AE06>  { [         6,  ampersand,      notsign  ] };
@@ -21,7 +21,7 @@ xkb_symbols "basic" {
     key <AE09>  { [         9, parenright, parenright ] };    
     key <AE10>  { [         0,      equal,        equal  ] };
     key <AE11>  { [apostrophe,   question,    quotedbl ] };
-    key <AE12>  { [exclamdown, questiondown, colon ] };
+    key <AE12>  { [exclamdown, questiondown, comma ] };
 
 
     // altgr-shift s,d,f,e : « » µ ¶
@@ -51,7 +51,7 @@ xkb_symbols "basic" {
     key <BKSL>  { [  colon,   Ccedilla,   braceright,   dead_breve ]    };
 
 
-    key <AB02>  { [ x, X, asterisk ] };
+    key <AB02>  { [ x, X, equal ] };
     key <AB03>  { [ c, C, colon ] };
     key <AB04>  { [ v, V, semicolon ] };
     key <AB05>  { [ b, B, bar ] };
