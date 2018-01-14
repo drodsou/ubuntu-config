@@ -47,3 +47,34 @@ t 7   // change partition type 7 = hpfs/ntfs/exfat
 w
 
 sudo mkfs.ntfs -f /dev/sdXy  // quick NTFS format
+
+
+# boot iso from grub2
+
+- grml like ubuntu isos
+apt install grml-rescueboot
+cp whatever.iso /boot/gmrl
+update-grub
+
+- 
+
+
+- unetbooting
+
+
+
+- manually
+/etc/grub.d/40_custom
+```
+# insmod ntfs
+# insmod iso9660
+
+menuentry "Menu entry for ISO" {
+        # set iso here
+        set isofile="/home/<username>/Downloads/<someiso>.iso"
+        # set partition here, /dev/sda1 = (hd0,1)
+        loopback loop (hd0,1)$isofile
+        linux (loop)/casper/vmlinuz boot=casper iso-scan/filename=$isofile noprompt noeject
+        initrd (loop)/casper/initrd.lz
+ }
+```

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# warn on open readonly file
+# do first:
+#   mv /bin/nano /bin/_nano
+# then copy this file to /bin/nano
+
+FILE="$1"
+ 
+[ $# -eq 0 ] && exit 1
+ 
+if [ -w "$FILE" ] || ( [ ! -e "$FILE" ] && [ -w `readlink -f $FILE | grep -o '/.*/'` ] ) ; then
+   _nano $FILE
+else
+   tput bel
+   echo "WARNING: You do not have write access to $FILE"
+   echo -n "Continue? y/[n]: "
+   read REPLY
+   if [ $REPLY ] && [ $REPLY == "y" ] ; then
+        _nano $FILE
+   fi
+fi
