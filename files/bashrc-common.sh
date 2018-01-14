@@ -31,7 +31,7 @@ alias coderoot='sudo code --user-data-dir="~/.vscode-root"'
 stty -ixon
 
 # numlock on (numbers)
-setleds -D +num
+#setleds -D +num
 
 # Additional key mapping
 #  - see map table: xmodmap -pke
