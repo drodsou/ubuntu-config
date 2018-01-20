@@ -1,0 +1,22 @@
+#delete all rules
+iptables -F
+
+#change default policy
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -P OUTPUT ACCEPT
+
+# allow incoming ssh
+iptables -A INPUT -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A OUTPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
+
+# disable outgoing connections to LAN
+iptables -A OUTPUT -d 192.168.0.0/16 -j REJECT
+
+#allow outbound DNS
+#iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
+#iptables -A INPUT -p udp --sport 53 -j ACCEPT
+
+#allow loopback
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A OUTPUT -o lo -j ACCEPT
