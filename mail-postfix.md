@@ -1,15 +1,15 @@
 
 # postfix
 
-- install
+#### ► installation
 
 apt install postfix
 
-- satellite mode
+► satellite mode
 
 smtp2.xxx.com
 
-- /etc/aliases
+► /etc/aliases
 ```
 postmaster: root
 root: externalemail@email.com
