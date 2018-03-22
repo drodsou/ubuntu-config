@@ -17,6 +17,7 @@ https://wiki.samba.org/index.php/LinuxCIFS_troubleshooting
 
 # credentials file
 
-> user=myuser
-> password=mypass
-> domain=mydomain.local
+> user=myuser  
+> password=mypass<br/>
+> domain=mydomain.local\
+> ...
