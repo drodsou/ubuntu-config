@@ -1,6 +1,7 @@
 # CIFS / SAMBA
 
 # docs
+https://help.ubuntu.com/community/MountWindowsSharesPermanently
 https://wiki.ubuntu.com/MountWindowsSharesPermanently
 
 # Mount windows share
@@ -14,4 +15,8 @@ https://wiki.ubuntu.com/MountWindowsSharesPermanently
 
 https://wiki.samba.org/index.php/LinuxCIFS_troubleshooting
 
+# credentials file
 
+  user=myuser
+  password=mypass
+  domain=mydomain.local
