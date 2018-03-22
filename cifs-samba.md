@@ -17,6 +17,8 @@ https://wiki.samba.org/index.php/LinuxCIFS_troubleshooting
 
 # credentials file
 
+chmod 600 /root/cifscreds
+
 > user=myuser  
 > password=mypass  
 > domain=mydomain.local  
