@@ -1,4 +1,4 @@
-# CIFS / SAMBA
+# CIFS - Mount Windows share
 
 # docs
 https://help.ubuntu.com/community/MountWindowsSharesPermanently
