@@ -25,8 +25,14 @@ dd if=/dev/urandom of=/dev/null status=progress
 
 # Clonezilla server
 
-follow install instrucions to get to apt install drbl
-then config:
+https://drbl.org/installation/01-prepare-server.php
 
-drblsrv -i
-drblpush -i
+Follow install instrucions to get to apt install drbl
+and then config it with:
+
+- drblsrv -i
+- drblpush -i
+
+Normal use
+
+- 
