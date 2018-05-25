@@ -28,11 +28,13 @@ dd if=/dev/urandom of=/dev/null status=progress
 https://drbl.org/installation/01-prepare-server.php
 
 Follow install instrucions to get to apt install drbl
-and then config it with:
+and then do the initial config with:
 
 - drblsrv -i
 - drblpush -i
 
 Normal use
 
-- 
+- /usr/sbin/dcs
+
+Interesting video: https://www.youtube.com/watch?v=1huczzBKSrM
