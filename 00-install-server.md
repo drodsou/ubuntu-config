@@ -71,7 +71,7 @@ source /usr/share/config-common/vimrc-comun.vim
 # ended server install
 CLONAR aqui como base
 
-## who to fix things
+## how to fix things
 :puerta de atrás, entrar como root, a prueba de fallos)
 - Enter maintenance mode: 
 press "e" in grub an add 1 at the end of "linux ...kernel .."
