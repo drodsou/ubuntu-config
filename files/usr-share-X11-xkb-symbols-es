@@ -9,10 +9,10 @@ xkb_symbols "basic" {
 
     name[Group1]="Spanish";
 
-    key <TLDE>  { [ slash, colon,    backslash,   backslash ] };
+    key <TLDE>  { [ masculine, ordfeminine,    backslash,   backslash ] };
     key <AE01>  { [         1,     exclam,          bar,   ampersand ] };
     key <AE02>  { [         2,     quotedbl,        at ] };
-    key <AE03>  { [         3,      comma,   numbersign ] };
+    key <AE03>  { [         3,      apostrophe,   numbersign ] };
     key <AE04>  { [         4,     dollar,   asciitilde,       dollar ] };
     key <AE05>  { [         5,    percent,      asterisk  ] };
     key <AE06>  { [         6,  ampersand,      notsign  ] };
@@ -48,7 +48,7 @@ xkb_symbols "basic" {
     key <AC09>  { [ l, L, braceright ] };
     key <AC10>  { [    ntilde, Ntilde,   asciitilde, dead_doubleacute ] };
     key <AC11>  { [dead_acute, dead_diaeresis, braceleft,   braceleft ] };
-    key <BKSL>  { [  colon,   Ccedilla,   braceright,   dead_breve ]    };
+    key <BKSL>  { [  slash,   Ccedilla,   slash,   dead_breve ]    };
 
 
     key <AB02>  { [ x, X, equal ] };
@@ -56,15 +56,12 @@ xkb_symbols "basic" {
     key <AB04>  { [ v, V, semicolon ] };
     key <AB05>  { [ b, B, bar ] };
     key <AB06>  { [ n, N, minus ] };
-    key <AB07>  { [ m, M, exclam ] };
+    key <AB07>  { [ m, M, equal ] };
     key <AB08>  { [ comma, semicolon, less ] };
     key <AB09>  { [ period, colon, greater ] };
     key <AB10>  { [ minus, underscore, slash ] };
 
 
-    key <CAPS>  { [ Control_L ] };    # works in console but not in unity desktop/terminal
+    key <CAPS>  { [ Shift_L ] };    # works in console but not in unity desktop/terminal
     # setxkbmap -option ctrl:nocaps   # works in desktop, put it in .profile
 };
-
-
-
