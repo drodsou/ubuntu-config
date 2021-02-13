@@ -12,6 +12,10 @@
 " see: http://vimdoc.sourceforge.net/htmldoc/digraph.html#digraphs
 " insert mode i_Ctrl-V remaped to i_Ctrl-F to avoid issues with Ctrl-V as paste on Windows Terminal
 
+" search option ??
+
+set shortmess=a
+
 " prevent exit visualmode when indenting block
 :vnoremap < <gv
 :vnoremap > >gv
@@ -21,20 +25,22 @@ set ignorecase
 " quick enter insert mode
 map <Space> i
 map <Backspace> i<Backspace>
-" WARNING:   map ^[OF i<End>    if you copypaste this from internet, first ^[ is ESC character, i_Ctrl-K EC
-map OF i<End>
+map <End> i<End>
+map <S-End> v<End>
+vmap <S-End> <End>
+vmap <End> <End>
 
 " -- block indent/unindent with tab and shift-tab
 map <Tab> i<Tab>
 vmap <Tab> >
 " -- shift tab
-" WARNING:   vmap ^[[Z <         if you copypaste this from internet, first ^[ is ESC character, i_Ctrl-K EC
-map [Z <Esc><i
-imap [Z <Backspace>
-vmap [Z <
+map <S-Tab> <Esc><i
+imap <S-Tab> <Backspace>
+vmap <S-Tab> <
+
 
 map <Del> i<Del>
-map <Enter> i<Enter>
+map <Enter> i<Enter>/
 imap <C-o> <Esc>o
 
 " -- copy paste with ctrl-c/x/v/z
