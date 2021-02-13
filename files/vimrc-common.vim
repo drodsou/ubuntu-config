@@ -12,8 +12,6 @@
 " see: http://vimdoc.sourceforge.net/htmldoc/digraph.html#digraphs
 " insert mode i_Ctrl-V remaped to i_Ctrl-F to avoid issues with Ctrl-V as paste on Windows Terminal
 
-search option
-
 " prevent exit visualmode when indenting block
 :vnoremap < <gv
 :vnoremap > >gv
@@ -62,13 +60,6 @@ map <C-x> ddi
 imap <C-z> <Esc>ui
 map <C-z> u
 
-"vmap <C-c> yi
-" copy to terminal clipboard OSC52, when in visual mode
-vmap <C-c> :OSCYank<CR>
-vmap <C-x> di
-vmap c y
-
-
 " stetics
 colorscheme industry
 set guifont=Noto\ Mono\ 14
@@ -108,24 +99,14 @@ imap <S-Down> <Esc>v<Down>
 map <S-Down> v<Down>
 vmap <S-Down> <Down>
 
-" to play with shift-S,D,F,E defined in symbols/es
-imap  <S-Left>
-map  <S-Left>
-vmap  <S-Left>
+vmap <C-x> di
+vmap c y
+vmap <Del> x
 
-imap  <S-Right>
-map  <S-Right>
-vmap  <S-Right>
+"vmap <C-c> yi
+" copy to terminal clipboard OSC52, when in visual mode
+vmap <C-c> :OSCYank<CR>
 
-imap µ <S-Up>
-map µ <S-Up>
-vmap µ <S-Up>
-
-imap  <S-Down>
-map  <S-Down>
-vmap  <S-Down>
-
-set shortmess=a
 
 " -------------------------- VIM-PLUG PLUGINS
 " first install: curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
