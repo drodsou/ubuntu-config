@@ -1,3 +1,8 @@
+# UPDATE 2021
+Parece que ahora ya hay zip normal para usar en ubuntu sin hacer la peripecia de transformar RPM, ver apartado 12c aqui:
+
+https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html
+
 # utiles para instalar rpm en ubuntu (oh yeah)
 apt-get install alien build-essential
 
@@ -39,4 +44,15 @@ sudo vi /etc/apache2/envvars
 export PATH=”/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/oracle/12.2/client64:/usr/lib/oracle/12.2/client64/lib”
 export LD_LIBRARY_PATH=/usr/lib/oracle/12.2/client64/lib
 export ORACLE_HOME=/usr/lib/oracle/12.2/client64
+# con esto ya no tienes que hacer conversiones en php de utf8 a iso
+export NLS_LANG=Spanish_Spain.UTF8
 ```
+
+# añadir sqlplus
+
+- De https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html
+- descargas sqlplus 12c (sqlcl es para ultimas versiones solo, 21...)
+- descomprimes contenido y mueves los ficheros a en ORACLE_HOME/lib
+- chmod +x sqlplus
+- en .bashrc export NLS_LANG=Spanish_Spain.UTF8  (aunque la bd use ISO), reinicia sesion
+- ya deberia funcionar (y verse bien acentos): `sqlplus user/pwd@TNSENTRY @file.sql`
