@@ -18,8 +18,15 @@ Type=simple
 Restart=always
 RestartSec=5
 User=MYUSER
-ExecStart=EXECUTABLE_WITH_FULL_PATH
+ExecStart=/PATH/TO/MYSERVICE
+EnvironmentFile=/PATH/TO/MYSERVICE.env
+# -- unneeded
+# StandardOutput=file:/var/log/MYSERVICE.log
+# StandardError=file:/var/log/MYSERVICE.log
 ```
+
+## generate .env file
+use 'env' command from normal user shell and remove unnecessary lines
 
 ## enable / start / stop
 
