@@ -8,8 +8,30 @@ https://www.digitalocean.com/community/tutorials/como-instalar-y-proteger-phpmya
 Guia SSL en Apache
 https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
 
+SSL UPDATE: Making self signed certificate for an ip that works in Chrome in 2021, no DNS needed:
+- Create 'minimal.cnf'
+```
+prompt             = no
+distinguished_name = req_dn
+x509_extensions = x509_ext
+
+[ req_dn ]
+
+commonName             = My organization
+
+[ x509_ext ]
+
+subjectAltName = @alt_names
+
+[alt_names]
+IP.1 = 192.168.1.100
+```
+- openssl req -x509 -new -newkey rsa:2048 -nodes -days 36500 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt -config minimal.cnf
+
 Guia instalar WordPress en Ubuntu 16.04
 https://www.digitalocean.com/community/tutorials/como-instalar-wordpress-con-lamp-en-ubuntu-16-04-es
+
+
 
 
 # general
