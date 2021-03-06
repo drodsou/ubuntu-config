@@ -9,7 +9,7 @@ Guia SSL en Apache
 https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-16-04
 
 SSL UPDATE: Making self signed certificate for an ip that works in Chrome in 2021, no DNS needed:
-- Create 'minimal.cnf'
+- Create 'minimal.cnf' e.g. in /etc/ssl 
 ```
 prompt             = no
 distinguished_name = req_dn
